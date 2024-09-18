@@ -82,6 +82,8 @@ body {
 main {
   display: flex;
   padding: 40px;
+  height: 100vh;
+  position: relative;
 }
 
 .hero-section {
@@ -152,10 +154,51 @@ main {
   background-color: #01595c;
 }
 
-.search-result {
+#search-result {
   color: white;
   text-align: left;
   display: flex;
   flex-direction: column;
   align-items: start;
+  height: 500px;
+  overflow-y: auto;
+  padding: 20px;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+}
+
+#search-result > .card {
+  background-color: white;
+  margin-bottom: 15px;
+  color: black;
+  width: 400px;
+  border-radius: 5px;
+
+  .card-data {
+    padding: 10px;
+
+    h3 {
+      font-size: 17px;
+    }
+
+    p {
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 13px;
+    }
+
+    button {
+      background-color: #017579;
+      border: none;
+      padding: 5px 15px;
+      border-radius: 5px;
+      color: white;
+    }
+  }
+}
+
+#search-result > .card > img {
+  width: 100%;
+  object-fit: cover;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }

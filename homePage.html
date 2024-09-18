@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <script src="search.js"></script>
     <nav class="navbar">
         <div class="navbar-logo">
             <img src="assets/logo.png" alt="TravelBloom Logo">
@@ -21,9 +22,9 @@
             <a href="contactPage.html">Contact Us</a>
         </div>
         <div class="search-container">
-            <input type="text" placeholder="Enter a destination or keyword">
-            <button type="submit">Search</button>
-            <button class="reset-btn" type="reset">Clear</button>
+            <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
+            <button type="submit" onclick="performSearch()">Search</button>
+            <button class="reset-btn" type="reset" onclick="clearData()">Clear</button>
         </div>
     </nav>
     <main>
@@ -43,7 +44,9 @@
                 <a href="#" class="btn">BOOK NOW</a>
             </div>
 
-            <div class="search-result"></div>
+
+            <div id="search-result"></div>
+        </div>
     </main>
 </body>
 
